@@ -1,0 +1,20 @@
+
+export const typeColors: Record<string, string> = {
+  Bug: 'bg-green-600',       
+  Dragon: 'bg-purple-500',   
+  Fairy: 'bg-pink-400',      
+  Fire: 'bg-orange-600',   
+  Ghost: 'bg-indigo-800',    
+  Ground: 'bg-yellow-700',   
+  Normal: 'bg-gray-400',     
+  Psychic: 'bg-pink-600',   
+  Steel: 'bg-gray-500',      
+  Dark: 'bg-gray-900',      
+  Electric: 'bg-yellow-300',  
+  Flying: 'bg-sky-300',      
+  Grass: 'bg-green-500',     
+  Ice: 'bg-sky-200',       
+  Poison: 'bg-purple-600', 
+  Rock: 'bg-yellow-800',    
+  Water: 'bg-blue-600',      
+};
