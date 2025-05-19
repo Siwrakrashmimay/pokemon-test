@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Pokemon } from '../../types/pokemons';
 import { TypeBadge } from '../common/TypeBadge';
+import Image from 'next/image';
 
 interface Props {
   pokemon: Pokemon;
@@ -12,9 +13,11 @@ export function PokemonCard({ pokemon }: Props) {
     <Link href={`/pokedex/${pokemon.name}`} className="w-full">
       <div className="border rounded-lg shadow p-4 bg-white flex flex-col items-center hover:shadow-lg transition">
         <div className="w-24 h-24 mb-2">
-          <img
+          <Image
             src={pokemon.image}
             alt={pokemon.name}
+             width={150}
+              height={150}
             className="w-full h-full object-contain"
           />
         </div>
