@@ -1,4 +1,3 @@
-'use client';
 
 import React from 'react';
 import Image from 'next/image';
@@ -11,7 +10,7 @@ export default function PokemonEvolutions({ evolutions }: { evolutions?: Evoluti
 
   return (
     <div className="mt-8">
-      <h2 className="text-2xl font-semibold mb-4">Evolutions</h2>
+      <h2 className="text-2xl font-extrabold mb-4 text-black">Evolutions</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {evolutions.map((evolution) => (
           <Link
@@ -26,7 +25,7 @@ export default function PokemonEvolutions({ evolutions }: { evolutions?: Evoluti
               height={120}
               className="w-24 h-24 mx-auto object-contain mb-2"
             />
-            <p className="font-semibold">
+            <p className="font-bold text-black">
               {evolution.number} - {evolution.name}
             </p>
           </Link>
