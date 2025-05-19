@@ -3,7 +3,7 @@
 'use client';
 import React, { useState } from 'react';
 
-import { PokemonList } from './PokemonList';
+import PokemonList from './PokemonList';
 import { SearchBox } from '../seacrhbox/SeacrhBox';
 import { usePaginatedPokemons } from '@hooks/usePaginatedPokemons';
 import { usePokemonSearch } from '@hooks/usePokemonSearch';

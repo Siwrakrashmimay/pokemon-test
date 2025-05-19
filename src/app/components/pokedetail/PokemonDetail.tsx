@@ -44,7 +44,7 @@ export default function PokemonDetail({ name }: Props) {
 
       {/* Evolutions */}
       <div className="mt-10">
-        <PokemonEvolutions evolutions={pokemon.evolutions} />
+        <PokemonEvolutions evolutions={pokemon?.evolutions} />
       </div>
     </div>
   );

@@ -4,7 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { usePokemonNames } from '@hooks/usePokemonNames';
 import { PokemonName } from '../../types/pokemoneName';
 
-export function SearchBox({ onSelect }: { onSelect: (name: string) => void }) {
+interface Props {
+  onSelect: (name: string) => void;
+}
+
+export function SearchBox({ onSelect }: Props) {
   const [search, setSearch] = useState('');
   const [open, setOpen] = useState(false);
   const names = usePokemonNames(154).names;
@@ -38,7 +42,7 @@ export function SearchBox({ onSelect }: { onSelect: (name: string) => void }) {
           placeholder="Search Pokémon Name"
           className="flex-grow border text-gray-900 p-2 rounded-l focus:outline-none"
         />
-        <button
+        <button 
           onClick={() => {
             onSelect(search);
             setOpen(false);

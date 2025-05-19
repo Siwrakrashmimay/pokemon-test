@@ -3,10 +3,13 @@ import { TypeBadge } from '@components/common/TypeBadge';
 import type { PokemonsDetailType } from '../../types/pokemonsDetail';
 import Image from 'next/image';
 
-export default function PokemonHeader({ pokemon }: { pokemon: PokemonsDetailType }) {
+interface Props {
+    pokemon: PokemonsDetailType ;
+}
+
+export default function PokemonHeader({ pokemon }: Props) {
     return (
         <div className="flex flex-col md:flex-row gap-6 bg-white rounded-lg p-6 text-black">
-            {/* Left: Image */}
             <div className="flex-1 flex justify-center items-center">
                 <Image src={pokemon.image} 
                     alt={pokemon.name}
@@ -15,7 +18,6 @@ export default function PokemonHeader({ pokemon }: { pokemon: PokemonsDetailType
                     className="w-64 h-64 object-contain" />
             </div>
 
-            {/* Right: Info */}
             <div className="flex-1 space-y-4">
                 <h1 className="text-4xl font-extrabold text-black">
                     {pokemon?.name} <span className="text-gray-700 font-bold">#{pokemon?.number}</span>

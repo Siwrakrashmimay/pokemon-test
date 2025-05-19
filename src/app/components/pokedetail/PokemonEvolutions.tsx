@@ -5,7 +5,11 @@ import Link from 'next/link';
 import { Evolution } from '../../types/pokemonEvolution';
 
 
-export default function PokemonEvolutions({ evolutions }: { evolutions?: Evolution[] }) {
+interface PokemonEvolutionsProps {
+  evolutions?: Evolution[];
+}
+
+export default function PokemonEvolutions({ evolutions }: PokemonEvolutionsProps) {
   if (!evolutions || evolutions.length === 0) return null;
 
   return (

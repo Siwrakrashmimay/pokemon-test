@@ -2,7 +2,11 @@ import React from 'react';
 import type { PokemonsDetailType } from '../../types/pokemonsDetail';
 import { TypeBadge } from '@components/common/TypeBadge';
 
-export default function PokemonStatsAndAttacks({ pokemon }: { pokemon: PokemonsDetailType }) {
+interface Props {
+  pokemon: PokemonsDetailType;
+}
+
+export default function PokemonStatsAndAttacks({ pokemon }: Props) {
   return (
     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
