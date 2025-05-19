@@ -8,7 +8,7 @@ interface Props {
   pokemon: Pokemon;
 }
 
-export function PokemonCard({ pokemon }: Props) {
+export default function PokemonCard({ pokemon }: Props) {
   return (
     <Link href={`/pokedex/${pokemon.name}`} className="w-full">
       <div className="border rounded-lg shadow p-4 bg-white flex flex-col items-center hover:shadow-lg transition">
